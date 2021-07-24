@@ -1,0 +1,35 @@
+import React from "react";
+import PropTypes from "prop-types";
+
+export function TrafficLight() {
+	const [color, setColor] = React.useState("");
+
+	return (
+		<div>
+			<div className="topoflight"></div>
+			<div className="main">
+				<div
+					onClick={() => {
+						setColor("red");
+					}}
+					className={
+						"red" + (color === "red" ? " selected" : "")
+					}></div>
+				<div
+					onClick={() => {
+						setColor("yellow");
+					}}
+					className={
+						"yellow" + (color === "yellow" ? " selected" : "")
+					}></div>
+				<div
+					onClick={() => {
+						setColor("green");
+					}}
+					className={
+						"green" + (color === "green" ? " selected" : "")
+					}></div>
+			</div>
+		</div>
+	);
+}
