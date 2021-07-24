@@ -6,7 +6,13 @@ export function TrafficLight() {
 
 	return (
 		<div>
-			<div className="topoflight"></div>
+			<div
+				onClick={() => {
+					setColor("");
+				}}
+				className={
+					"topoflight" + (color === "null" ? " selected" : "")
+				}></div>
 			<div className="main">
 				<div
 					onClick={() => {
